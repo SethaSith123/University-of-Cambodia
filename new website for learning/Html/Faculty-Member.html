@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Faculty Members</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        ul{
+    list-style: none;
+    background: blue;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown {
+    width: 500px;
+    background: green;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: green;
+    color: #000;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+#hold{
+    background: green;
+
+}
+        .paragraph{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .paragraph > p{
+            font-size: 20px;
+        }
+        .text{
+            background-color: blue;
+            color: white;
+            width: 100%;
+            height: 50px;
+            padding: 10px 5px 0px;
+            border: solid #000 3px;
+        }
+        .pix{
+            margin: 20px 0px;
+        }
+        .pix > img{
+            width: auto;
+            height: 481px;
+        }
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="UC .html" id="hold">Home</a></li>
+                <li><a href="/Html/News.html">News</a></li>
+                <li><a href="/Html/Faculty-Member.html">Faculty Members</a></li>
+                <li>
+                    <a href="#">Programs</a>
+                    <ul class="dropdown">
+                        <ul>
+                            <li><a href="/Html/News.html">Information Technology</a></li>
+                            <li><a href="/Html/News.html">Computer Science</a></li>
+                            <li><a href="/Html/News.html">Electronics and Telecommunications</a></li>
+                        </ul>
+                    </ul>
+                </li>
+                <li><a href="#">Computer Labs</a></li>
+            </ul>
+        </div>
+        <div class="scrollamount">
+            <marquee behavior="" direction="up" style="background-color: blue; color: white;" scrollamount="10"><img style="height: 60px;width: 60%;" src="/img/Collage of Technology.jpg" alt=""> </marquee>
+            
+        </div>
+        <div class="paragraph">
+            <p>ស្វាគមន៍មកកាន់មហាវិទ្យាល័យនិងបច្ចេកវិទ្យានៃសកលវិទ្យល័យកម្ពុជា។ សម្រាប់ប្អូនៗសិស្សានុសិស្ស ដែលមានបំណងចង់បន្តការសិក្សាថ្នាក់បរិញ្ញាប័ត្ររង នឺងថ្នាក់បរិញ្ញាបត្រ។ សូមចុះឈ្មោះជាមួយយើងឥឡូវនេះ រីអាចអញ្ចើញមកកាន់សាកលវិទ្យាល័យផ្ទាល់ក៏បាន។ </p><br>
+            <p>Welcome to Collage of Science and Technology of The University of Cambodia. For everyone who wish's to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.</p><br>
+        </div>
+        <div class="text">
+            <h1>Majors offering in College of Science and Technology</h1>
+        </div>
+        <table style="width:100%;padding: 10px 0px;">
+            <tr>
+              <th>Majors</th>
+              <th>Associate, Bachelor</th>
+              <th>Master, PhD</th>
+            </tr>
+            <tr>
+              <td>Computer Science (Offering)</td>
+              <td>AA and BA</td>
+              <td>MS and PhD</td>
+            </tr>
+            <tr>
+              <td>Information Technology (Offering)</td>
+              <td>BA</td>
+              <td>MS</td>
+            </tr>
+            <tr>
+                <td>Electronics and Telecommunications (Not uat Offering)</td>
+                <td>BA</td>
+                <td>MS</td>
+            </tr>
+          </table>
+    </div>
+</body>
+</html>

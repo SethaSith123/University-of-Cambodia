@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style:none ;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/yamaha\ r6.jpg');
+    
+}
+.container{
+    width: 100%;
+    height: 100%;
+
+}
+
+.container .a{
+    width: 100%;
+    margin: 0;
+    padding:20px;
+    display: flex; /*អោយវារត់ជាជួរដេក */ /*Notes : ber sin k'men display: flex teh yg min ach use just align ban teh*/
+    justify-content: center;/*ធ្វើអោយមកកណ្ដាលគិត width*/
+    align-items: center;/*ធ្វើអោយមកកណ្ដាលគិត heigh*/
+    justify-content: space-between;/*ញែកសងខាង*/
+    background-color: rgb(255, 255, 255);
+
+}
+.container .icon i{
+    padding: 0px 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.container .icon #Search{
+    width: 200px;
+    padding: 4px 0px;
+    display: none;
+}
+.container .menu-bar{
+    width: 100%;
+}
+.container .menu-bar ul{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.container .menu-bar  ul  {
+    padding: 15px 15px;
+    
+    margin-left: 10px;
+}
+.container .menu-bar ul li a{
+    padding: 8px 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s linear;
+    color: rgb(0, 0, 0);
+
+}
+.container .menu-bar   a:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+.container .menu-bar   a.ALL{
+    background-color: Black;
+    color: white;
+}
+.big-box{
+    border-radius: 2px;
+    /*background-color: aqua;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,auto));
+    grid-gap: 10px;
+    
+}
+.big-box .small-box{
+    height: 350px;
+    margin: 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 255, 47);
+}
+.big-box .small-box .moto{
+    width: 100%;
+    height: auto;
+}
+.moto img {
+    width: 400px;
+    height: 100%;
+}

@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+.container{
+    width: 100%;
+}
+ul{
+    list-style: none;
+    background: rgb(0, 0, 255);
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown {
+    width: 500px;
+    background: rgb(2, 255, 2);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: green;
+    color: #000;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+#hold{
+    background: green;
+
+}
+.paragraph{
+    width: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.paragraph > p{
+    font-size: 20px;
+}
+.img{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px,auto));
+    width: 100%;
+    height: 27vh;
+}
+.img >.img-control{ 
+    margin: 20px 20px;
+    padding: 10px 0px;
+}
+.img > .img-control > img{
+    margin: 0 2px;
+    padding: 0px;
+    width: 340px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.scrollamount{
+    margin: 30px 0px 0px 0px;
+    padding: 50px 0px;
+}
+.scrollamount > marquee{
+    padding: 10px 5px 0px;
+    width: 100%;
+    height: 50px;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+.pix{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px,auto));
+    width: 100%;
+    height: 27vh;
+}
+.pix > .pix-control{
+    padding: 0px 20px;
+}
+.pix > .pix-control > img{
+    margin: 0 2px;
+    padding: 0px;
+    width: 340px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 5px;
+}

@@ -1,0 +1,66 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    width: 100%;
+    height: 500vh;
+ }
+ .menu{
+    z-index: -1;
+ }
+.list{
+    background-color: #e1ddd2;
+    width: 100%;
+    height: 100px;
+    border-bottom-right-radius: 95px;
+    border-bottom-left-radius: 95px;
+    box-shadow: 0 0 15px #6b6464;
+    position: fixed;
+    top: 0;
+}
+.home{
+    position: absolute;
+    right: 4%;
+    bottom: 18%;
+}
+.home > ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Black Ops One', cursive;
+}
+.home > ul > li{
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+}
+.home > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.home > ul > li > a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.logo{
+    position: absolute;
+    left: 7%;
+    bottom: 18%;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Black Ops One', cursive;
+    font-size: 30px;
+    text-decoration: underline ;
+}
+.bar{
+   
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+
+}

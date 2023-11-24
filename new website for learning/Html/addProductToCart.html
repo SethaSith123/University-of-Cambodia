@@ -1,0 +1,217 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+        }
+        .header {
+            width: 100%;
+            padding: 15px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .cart{
+            width: 100px;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 12px 8px;
+            border: 1px solid #fff;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .product {
+            width: 100%;
+            position: absolute;
+            top: 3;
+            left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+            grid-gap: 25px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .box-pro{
+            height: 500px;
+        }
+        .product-cart {
+            width: 30%;
+            height: 100%;
+            padding: 0px 20px;
+            overflow-y: scroll;
+            position: absolute;
+            top: 3;
+            right: -40%;
+            background-color: hsl(0, 39%, 95%);
+            transition: all 0.3s linear;
+        }
+        .product-cart.active {
+            top: 3;
+            right: 0%;
+        }
+        .cart-product {
+            width: 100%;
+            background-color: hsl(0, 3%, 74%);
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            margin-top: 10px;
+        }
+        .img-pro{
+            width: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h2 style="color: #fff;">PHUMENT</h2>
+        </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping" style="color: #fff;"></i>
+             <span class="number" style="color: #fff;">0</span>
+        </div>
+    </header>
+    <div class="container" style="margin-top: 100px;">
+        <div class="product">
+        </div>
+        <div class="product-cart ">
+        </div>
+    </div>
+</body>
+<script>
+    const addcart = document.querySelector('.cart');
+    const productCart = document.querySelector('.product-cart');
+    addcart.addEventListener('click',function(){
+         productCart.classList.toggle('active');
+    });
+const product = [
+    {
+        img : '/img/mac.webp',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/lenovo.jpg',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/asus1.jpg',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/spker1.jpg',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/mouse.jpg',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/acer.jpg',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/mac.webp',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+    {
+        img : '/img/mac.webp',
+        title : 'Computer Mac New',
+        price : 1200
+    },
+];
+const caticgaries = [...new Set(product.map((item)=>{
+    return item;
+}))];
+var i=0;
+const prodctHtml = document.querySelector('.product');
+prodctHtml.innerHTML = caticgaries.map((items)=>{
+    var {img,title,price} = items;
+     return(
+        `
+        <div class="card box-pro">
+            <img src=${img} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${title}</h5>
+                <p class="card-price">${price} $</p> `+
+                "<a href='#' class='btn btn-primary' onclick='addProduct("+(i++)+")'>Add to Cart</a>"
+                +` 
+            </div>
+        </div>
+       `
+     );
+}).join('');
+var cart = [];
+function displaycart(a){
+    let j=0; let total =0  
+    document.querySelector('.number').innerHTML = cart.length;
+    if(cart.length==0){
+        document.querySelector('.product-cart').innerHTML = 'Wellom To My Shop';
+    }
+    else {
+        document.querySelector('.product-cart').innerHTML = cart.map((items)=>{
+           var {img,title,price} = items;
+           return(
+            `
+            <div class="cart-product">
+                <img src=${img} alt="" class="img-pro">
+                <h6>${title}</h6>
+                <span>${price} $</span> `+
+                "<i class='fa-solid fa-trash' onclick='deletProduct("+(j++)+")'></i>"+`
+            </div>`
+
+           )
+        }).join('');
+    }
+}
+function addProduct(a){
+    cart.push({...caticgaries[a]});
+    displaycart();
+}
+function deletProduct(a){
+    cart.splice(a,1);
+    displaycart();
+}
+</script>
+</html>

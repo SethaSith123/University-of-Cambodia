@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(50deg,#0ef, #c800ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 2px 2px 3px rgb(0, 0, 0);
+            width:50%;
+            height: 60vh;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            padding: 10px 0px;
+            text-shadow: 1px 1px 1px #fff;
+            font-size: 30px;
+        }
+        .wrapper{
+            width: auto;
+            /* background: #fff; */
+            padding: 20px 10px 30px;
+        }
+        .wrapper .input-data{
+            height: 24px;
+            width: 100%;
+            position: relative;
+        }
+        .wrapper .input-data input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            
+            border-bottom: 2px solid silver;
+        }
+        .wrapper .input-data input:focus ~ label{
+            transform: translateY(-20px);
+        }
+        .wrapper .input-data label{
+             position: absolute;
+             bottom: 10px;
+             left: 0;
+             color: gray;
+             pointer-events: none;
+             transition: all 0.3s ease;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="log">
+                <h1>Sign In</h1>
+            </div>
+            <div class="wrapper">
+                <div class="input-data">
+                    <input type="text" required>
+                    <label>Users name</label>
+                </div>
+            </div>
+            <div class="birthday">
+                <div class="text">
+                    <h4>
+                        Last Name
+                    </h3>
+                </div>
+                <div class="input">
+                    <input type="date">
+                </div>
+            </div>
+            <div class="mail">
+                <div class="text">
+                    <h4>
+                        E-mail
+                    </h3>
+                </div>
+                <div class="input">
+                    <input type="email">
+                </div>
+            </div>
+            <div class="pass">
+                <div class="text">
+                    <h4>
+                        Password
+                    </h3>
+                </div>
+                <div class="input">
+                    <input type="password">
+                </div>
+            </div>
+            <div class="cpas">
+                <div class="text">
+                    <h4>
+                        Confirm Password
+                    </h3>
+                </div>
+                <div class="input">
+                    <input type="password">
+                </div>
+            </div>
+            <button>Submit</button>
+            <p>by clicking the Sign up Button you gree to our Terms and Public, Privacy</p>
+        </div>
+        
+    </section>
+</body>
+</html>

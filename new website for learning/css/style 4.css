@@ -1,0 +1,95 @@
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&display=swap');
+  *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Black Ops One', cursive;
+  }
+  body{
+    width: 100%;
+
+  }
+  .container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(11, 39, 58, 0.486);
+
+  }
+  .log-in{
+    width: 550px;
+    height: 53vh;
+    border:5px solid #bfbbab;
+    border-radius: 5PX;
+    background-color: rgba(0 , 0, 0 ,0.7);
+  }
+.header{
+ font-size:25px;
+ color: #a5dbdd;
+} 
+.mail {
+  display: flex;
+
+}
+.mail > input{
+  width: 400px;
+  height: 35px;
+  margin: 10px 0px 0px 41px;
+  border-radius: 10px;
+}
+.passwo{
+  margin: 25px 0px 0px 0px;
+  display: flex;
+}
+.passwo > input{
+  margin: 0px 0px 0px 12px;
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+}
+.show{
+  display: flex;
+  margin: 25px 30px 0px;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.show > a{
+  text-decoration: none;
+  color: white;
+}
+.show > a:hover{
+  color: darkslategray;
+}
+.log{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
+}
+.log > input  {
+  width: 350px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.log > input:hover{
+  background-color: black;
+  color: white;
+  border-color: #fff;
+}
+.rst{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin: 20px 0px;
+}
+.rst > a{
+  margin: 0px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.rst > a:hover{
+  color: bisque;
+}
